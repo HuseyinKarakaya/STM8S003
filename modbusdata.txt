@@ -1,0 +1,25 @@
+ 	 Output_Registers[0] = ReadFLASH(0x4000);//cihaz NO
+  Output_Registers[1] = ReadFLASH(0x4002);//Modbus ID
+  Output_Registers[2] = ReadFLASH(0x4004);//Modbus UART1_BAUDRATE     1: 9600, 2: 19200
+  Output_Registers[3] = ReadFLASH(0x4006);//Modbus UART1_WORDLENGTH   8: 8 DATA BITS, 9: 9 DATA BITS
+  Output_Registers[4] = ReadFLASH(0x4008);//Modbus PARITY      1: NO, 2: EVEN, 3: ODD
+  Output_Registers[5] = ReadFLASH(0x400A);//Modbus UART1_STOPBITS     1: 1STOP BIT, 2: 2STOP BIT
+  Output_Registers[6] = ReadFLASH(0x400C);//Sensor RANGE              kullanilmiyor
+  Output_Registers[7] = ReadFLASH(0x400E);//Sensor RESPONSE           1: 1sn/20örneklem
+
+
+
+Field Name	RTU (hex)	ASCII Characters
+Header	None	: (Colon)
+Slave Address	11	1 1
+Function	06	0 6
+Register Address Hi	00	0 0
+Register Address Lo	01	0 1
+Write Data Hi	00	0 0
+Write Data Lo	03	0 3
+Error Check Lo	9A	LRC (E 5)
+Error Check Hi	9B	 
+Trailer	None	CR LF
+Total Bytes	8	17
+
+Re
